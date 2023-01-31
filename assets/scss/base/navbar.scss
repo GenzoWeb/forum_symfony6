@@ -1,0 +1,19 @@
+.navbar {
+   background-color: $navColor;
+   a {
+      color: $colorTextNav !important;
+      font-weight: 600;
+
+      &:hover {
+         color: $colorTextNavHover !important;
+      }
+   }
+
+   .nav-link.active, .navbar-brand {
+      color: $colorTextNavActive !important;
+   }
+
+   .navbar-brand {
+      padding-top: unset;
+   }
+}

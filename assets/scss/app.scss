@@ -1,7 +1,4 @@
+@import '../css/reset.css';
 @import "~bootstrap/scss/bootstrap";
-
-$color: lightgrey;
-
-body {
-   background-color: $color;
-}
+@import "base/settings.scss";
+@import "base/navbar.scss";

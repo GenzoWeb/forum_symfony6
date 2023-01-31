@@ -1,0 +1,17 @@
+/* COLOR */
+$bodyColor: #f7fafb;
+$navColor: #e1e1e2;
+$colorTextNavActive: #747474;
+$colorTextNav: rgba(116, 116, 116, 0.60);
+$colorTextNavHover: rgba(116, 116, 116, 0.75);
+
+
+body {
+   font-family: 'Inter', Arial, sans-serif;
+   background-color: $bodyColor;
+}
+
+h1 {
+   display: flex;
+   justify-content: center;
+}

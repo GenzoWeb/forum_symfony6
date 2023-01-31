@@ -3,5 +3,25 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <h1>Page d'accueil</h1>
+    <h1>Présentatation</h1>
+    <div class="mt-3 mb-3">
+        <p>Bienvenue sur le forum dédié au développement web !</p>
+        <p>
+            Notre forum est un espace de discussion et d'échange dédié à tous les passionnés du développement web. Il est conçu pour permettre aux développeurs débutants et expérimentés de se connecter, de partager leurs connaissances et de découvrir de nouvelles techniques.
+        </p>
+        <p>
+            Vous pouvez trouver des discussions sur les technologies web les plus récentes, telles que HTML, CSS, PHP, Symfony, Laravel, JavaScript, React, Vue.js, etc. Vous pouvez également discuter des meilleures pratiques pour la création de sites web performants et accessibles.
+        </p>
+        <p>
+            Le forum offre également un espace pour discuter des défis que vous rencontrez dans votre travail de développement web et obtenir de l'aide et des conseils des membres de la communauté.
+        </p>
+        <p>
+            Rejoignez-nous pour discuter de tout ce qui concerne le développement web, pour apprendre de nouvelles choses et pour vous connecter avec d'autres passionnés du domaine.
+        </p>
+        <p>Nous espérons vous voir bientôt sur le forum !</p>
+        <p>PS: Projet personnel pour pratiquer avec le framework Symfony &#128516</p>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-secondary d-flex m-auto"><a href="{{ path('forum') }}">REJOIGNEZ NOUS</a></button>
+    </div>
 {% endblock %}
