@@ -1,4 +1,7 @@
 @import '../css/reset.css';
 @import "~bootstrap/scss/bootstrap";
-@import "base/settings.scss";
-@import "base/navbar.scss";
+@import 'base/settings';
+@import 'base/navbar';
+@import 'base/footer';
+
+@import 'page/forumHome';

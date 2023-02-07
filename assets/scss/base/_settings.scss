@@ -4,11 +4,17 @@ $navColor: #e1e1e2;
 $colorTextNavActive: #747474;
 $colorTextNav: rgba(116, 116, 116, 0.60);
 $colorTextNavHover: rgba(116, 116, 116, 0.75);
+$colorTextFooter: #121c4299;
+$colorTextHover: #4869ee;
+$border: #e6eff4;
 
 
 body {
    font-family: 'Inter', Arial, sans-serif;
    background-color: $bodyColor;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 h1 {

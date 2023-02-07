@@ -1,0 +1,35 @@
+.footer {
+   border-top: solid 4px $border;
+}
+
+.title-footer {
+   font-weight: 700;
+}
+
+.footer-color {
+   color: $colorTextFooter;
+}
+
+.footer-section-info {
+   width: 140px;
+}
+
+.footer-contact {
+   img {
+      width: 20px;
+      margin-right: 5px;
+   }
+
+   a {
+      align-items: flex-start;
+      display: flex;
+
+      &:hover {
+         color: $colorTextHover !important;
+      }
+   }
+}
+
+.copyright {
+   background-color: $navColor;
+}

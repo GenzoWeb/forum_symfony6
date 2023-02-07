@@ -1,0 +1,52 @@
+.section-forum {
+   border-top: 2px solid $border;
+
+   .forum-sidebar {
+      border-right: 1px solid $border;
+   }
+   
+   .forum-article {
+      position: relative;
+      border-bottom: 1px solid $border;
+   
+      &:hover {
+         background: #fff;
+         box-shadow: 0 2px 4px #d8e1e8;
+      }
+   
+      &:hover .title-com {
+         color: $colorTextHover;
+      }
+   
+      p {
+         margin: 0 !important;
+      }
+   }
+   
+   .title-com {
+      font-weight: 700;
+   }
+   
+   .infos-com {
+      color: $colorTextFooter;
+   }
+   
+   .forum-link {
+      position: relative;
+      z-index: 3;
+   
+      &:hover {
+         text-decoration: underline !important;
+      }
+   }
+   
+   .forum-article-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      z-index: 2;
+   }
+}

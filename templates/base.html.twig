@@ -36,5 +36,50 @@
         <div class="container">
             {% block body %}{% endblock %}
         </div>
+        <footer class="footer mt-auto">
+            <div class="container p-4">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-6 col-md-12 mb-4">
+                        <p class="title-footer mb-3">Résumé</p>
+                        <p class="footer-color">
+                            Je suis en train de suivre une reconversion passionnante dans le développement web. Après avoir terminé une formation à distance en tant que développeur web, je continue de développer mes compétences en créant des sites web. J'aime apprendre, mettre en pratique mes connaissances et développer mes compétences pour devenir toujours plus compétent.
+                        </p>
+                    </div>
+                    <div class="footer-section-info col-lg-2 col-md-6 mb-4">
+                        <p class="title-footer mb-3">Infos / Contact</p>
+                        <ul class="footer-color footer-contact ps-0">
+                            <li class="mb-1">
+                                <a href="https://www.genzo.fr/Portfolio" target="_blank">
+                                    <img src="{{ asset('images/icon-portfolio.png') }}" alt="portfolio logo!"/>
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="https://github.com/GenzoWeb" target="_blank">
+                                    <img src="{{ asset('images/icon-github.png') }}" alt="github logo!"/>
+                                    GitHub
+                                </a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="https://www.linkedin.com/in/genzoweb-gw-361aaa17a" target="_blank">
+                                    <img src="{{ asset('images/icon-linkedin.png') }}" alt="linkedin logo!"/>
+                                    LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{{ asset('images/icon-mail.png') }}" alt="mail logo!"/>
+                                    Email
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center p-3">
+                © 2023 Copyright:
+                <a href="https://www.genzo.fr/Portfolio">GenzoWeb</a>
+            </div>
+        </footer>
     </body>
 </html>
