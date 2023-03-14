@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Forum{% endblock %}
+
+{% block body %}
+    <h1>Forum</h1>
+    <div class="section-forum row my-3">
+        <div class="forum-sidebar mt-3 col-lg-2">
+            <ul>
+                <li class="mb-2"><a href="">Tout les sujets</a></li>
+                {% for category in categories %}
+                    <li class="mb-2">
+                        <a href="">{{ category.name }}</a>
+                        {% if category.getSubCategory() is not null %}
+                            <ul>
+                                {% for subCategory in category.getSubCategory() %}
+                                    <li><a href="">{{ subCategory }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="forum-content mt-3 col-lg-10 d-flex flex-column">
+            {% for message in messages %}
+                <div class="forum-article d-flex p-3">
+                    <div class="col-lg-1">
+                        <img src="{{ asset('images/default.png') }}" alt="avatar">
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="title-com">{{ message.getSubject().getTitle() }}</p>
+                        <div class="infos-com">
+                            <p>
+                                <a class="forum-link" href="">{{ message.getUser().getPseudo() }}</a>,
+                                {% set difference = date('now').diff(date(message.published)) %}
+                                {% set leftDays = difference.days %}
+                                {% if leftDays == 0 %}
+                                    {% if difference.format('%h') < 1 %}
+                                        Posté il y a {{ difference.format('%i min') }}
+                                    {% elseif difference.format('%h') == 1 %}
+                                        Posté il y a 1 heure et {{ difference.format('%i min') }}
+                                    {% elseif difference.format('%h') > 1 %}
+                                        Posté il y a {{ difference.format('%h heures') }} et {{ difference.format('%i min') }}
+                                    {% endif %}
+                                {% elseif leftDays == 1 %}
+                                    Posté hier
+                                {% else %}
+                                    Il y a {{ leftDays }} jours
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 d-flex flex-column">
+                        <a class="forum-link" href="">{{ message.getSubject().getCategory().getName() }}</a>
+                        {# <a class="forum-link" href="">Sujet X</a> #}
+                    </div>
+                    <div class="col-lg-1">
+                        {% if subjectCounts[message.getSubject().getId()] is defined %}
+                            {{ subjectCounts[message.getSubject().getId()] }} com
+                        {% else %}
+                            0 com
+                        {% endif %}
+                    </div>
+                    <a href="ARTICLE" aria-hidden="true" class="forum-article-link" tabindex="-1"></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
